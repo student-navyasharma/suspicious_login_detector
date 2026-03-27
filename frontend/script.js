@@ -1,3 +1,4 @@
+console.log("JS working")
 document.getElementById('loginForm').addEventListener('submit',async function(e){
     e.preventDefault();            //Normally when a form submits it refreshes the page but we don't want that so we use preventDefault() method
     const email=document.getElementById('email').value 
