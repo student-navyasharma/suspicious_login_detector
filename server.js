@@ -115,3 +115,52 @@ If this wasn't you, please secure your account immediately.
 app.listen(5000, () => {
     console.log('🚀 Server running on port 5000')
 })
+
+
+
+
+
+
+
+
+
+
+// EMAIL SYSTEM SUMMARY (NODEMAILER PROJECT)
+
+// WHY 2-STEP VERIFICATION?
+// Google blocks normal password login for security
+// App Passwords only work when 2-Step Verification (2FA) is enabled
+// 2FA ensures secure authentication for third-party apps
+// WHAT IS APP PASSWORD?
+// A 16-digit secure key generated from Google account
+// Used instead of Gmail password in backend
+// Provides limited and safe access to send emails
+// SENDER VS RECEIVER
+
+// SENDER (Fixed):
+
+// The Gmail account used in backend
+// Example: navyasharma01k@gmail.com
+// Authenticated using App Password
+
+// RECEIVER (Dynamic):
+
+// The email entered by user during login
+// Changes every time
+// HOW EMAIL FLOW WORKS
+
+// Step 1: User logs in from frontend
+// Step 2: Frontend sends email & password to backend
+// Step 3: Backend detects device & browser
+// Step 4: If suspicious login → trigger email
+// Step 5: Nodemailer logs into Gmail using App Password
+// Step 6: Email is sent from sender → receiver
+
+// WHY NOT NORMAL PASSWORD?
+// Less secure and blocked by Google
+// App Password is safer and recommended
+// KEY TAKEAWAY
+// 2FA enables App Password
+// App Password authenticates sender
+// Receiver email is dynamic
+// Backend securely sends alert emails
